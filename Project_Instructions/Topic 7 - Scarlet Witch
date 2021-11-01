@@ -1,0 +1,44 @@
+Topic 7
+Scarlet Witch
+
+After becoming Scarlet Witch, Wanda Maximoff still decided to keep West View enchanted in order to ensure that Vision and her family remain alive in this reality. Now, since this town requires internet connectivity Wanda decides to enchant the best network engineer in the country to set up the architecture, which turns out to be you. 
+Now you are given a specification by Wanda and your task is to design the network architecture for West View. 
+Now to create your networking architecture, you are given the table below which consists of the population of the locations in brackets and the distances between the two locations in each cell.
+ 	Proctor Residence	M&B Hardware	Ralph Bohner's House	Westview Elementary School	Westview Public Library	Vision Residence
+Proctor Residence
+(277)	0	 	 	 	 	 
+M&B Hardware
+(4250)	572	0	 	 	 	 
+Ralph Bohner's House
+(511)	74	441	0	 	 	 
+Westview Elementary School
+(3829)	543	129	464	0	 	 
+Westview Public Library
+(1240)	892	357	914	367	0	 
+Vision Residence  (7112)	912	342	892	469	147	0
+*The numbers in brackets () specify the population size of the location and the values in the table specifies the distance (in miles) between locations. * 
+
+
+While creating the network infrastructure there are certain restrictions and rules that you need to follow: 
+Consider each location as a separate LAN network connected by routers.
+For that, you need to choose an appropriate private network address and from that create subnets to assign to each location. But remember you can use only half the available IP addresses from the network address i.e 192.168.1.0/24 has 254 possible IP addresses, but you can use only 127 which is half of that.
+Don’t choose reserved addresses as your network address. Example: 0.0.0.0 0.0.0.0
+Assign IP addresses to all interfaces and devices. You have to show at least two end devices for a location.
+Westview Public Library (7112) has a web server and a DNS server that will be used to serve the entire town.
+Proctor’s residence is using a public addressing scheme while all the other networks are using private addressing scheme.
+You will have a DHCP server which should dynamically provide IP addresses to at least half the LANs.
+Establish connections among all the networks with the shortest route possible.
+Must have at least one floating route.
+Must have a backup system to handle missing routing entries.
+Configure half of the network to be routed dynamically.
+Make sure that you can ping from a device in one location to another after completion.
+
+
+Deliverables
+The network mentioned above should be implemented in packet tracer, with necessary devices and full configuration.
+After completion you should be able to test the conditions imposed.
+You will have to submit the followings:
+Network topology diagram with proper labels
+The configuration commands of all the routers that you have implemented.
+VLSM tree
+IP address table
